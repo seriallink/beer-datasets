@@ -1,20 +1,26 @@
 # 🍺 Beer Datasets
 
-This repository contains a curated and enriched dataset extracted from [BeerAdvocate](https://www.beeradvocate.com/), designed for testing data pipelines, CDC ingestion, analytical workloads, and sentiment analysis experiments.
+This repository contains individual, ready-to-use datasets in **CSV format**, extracted and enriched from the public BeerAdvocate archive. Each dataset is packaged as a separate `.zip` file for modular use in data pipeline testing, CDC simulations, and batch processing experiments.
 
-## 📊 Dataset Overview
+---
 
-| Dataset  | Description                       | Format   | Approx. Rows |
-|----------|-----------------------------------|----------|--------------|
-| `brewery.csv` | Unique breweries with IDs and names     | CSV      | 5,800+       |
-| `beer.csv`    | Beers with style, ABV, and brewery ID  | CSV      | 66,000+      |
-| `user.csv`    | Simulated users (based on profile names, enriched with Faker) | CSV | 33,000+ |
-| `review.csv`  | Reviews with scores and detailed text  | CSV      | 1.5M+        |
+## 📦 Available Datasets
 
-## 🛠️ Use Cases
+| File          | Description                                    | Rows (approx)  |
+|---------------|------------------------------------------------|----------------|
+| `brewery.zip` | Brewery ID and name                            | 5,800+         |
+| `beer.zip`    | Beers with style, ABV, and brewery reference   | 66,000+        |
+| `profile.zip` | Simulated users profile based on profile names | 33,000+        |
+| `review.zip`  | Full reviews with scores and tasting notes     | 1.5M+          |
 
-- Test CDC pipelines (e.g., Aurora → DMS → Kinesis)
-- Simulate streaming of users
-- Run batch ingestion of review data
-- Perform sentiment analysis with AWS Comprehend
-- Explore Medallion architecture (bronze → silver → gold)
+> 🔹 **All files are in CSV format.**
+
+> ⚠️ **Note:** The data in `profile.zip` is fully synthetic. It was generated using Faker and is intended **exclusively for testing purposes**.
+
+---
+
+## 🚀 Using with Data Master CLI
+
+```bash
+# Download and extract a specific dataset
+datamaster seed --dataset beer
