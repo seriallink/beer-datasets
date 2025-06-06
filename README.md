@@ -1,6 +1,6 @@
 # 🍺 Beer Datasets
 
-This repository contains individual, ready-to-use datasets in **CSV format**, compressed using `.gz`, and extracted from the public BeerAdvocate archive. Each dataset is available as a separate `.csv.gz` file for modular use in data pipeline testing, CDC simulations, and batch processing experiments.
+This repository contains individual, ready-to-use datasets in **CSV format**, compressed using `.gz`, and extracted from the public [BeerAdvocate](https://www.beeradvocate.com/) archive. Each dataset is available as a separate `.csv.gz` file for modular use in data pipeline testing, CDC simulations, and batch processing experiments.
 
 ---
 
